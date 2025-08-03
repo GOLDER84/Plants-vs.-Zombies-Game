@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pvsz_game.Stage1Controller">
+    <children>
+
+        <ImageView fx:id="background" fitHeight="638.0" fitWidth="946.0">
+            <image>
+                <Image url="@../../../images/Map.jpg" />
+            </image>
+        </ImageView>
+        <ProgressBar fx:id="zombieWaveBar" layoutX="616.0" layoutY="10" prefHeight="18.0" prefWidth="304.0" progress="0.0" rotate="180.0" style="-fx-accent: green;" />
+        <ImageView fx:id="waveHead" fitHeight="40.0" fitWidth="40.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/head_wave.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="a11" fitHeight="98.0" fitWidth="75.0" layoutX="217.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a13" fitHeight="98.0" fitWidth="68.0" layoutX="367.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a12" fitHeight="98.0" fitWidth="75.0" layoutX="292.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a14" fitHeight="98.0" fitWidth="68.0" layoutX="435.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a15" fitHeight="98.0" fitWidth="68.0" layoutX="503.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a16" fitHeight="98.0" fitWidth="68.0" layoutX="577.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a17" fitHeight="98.0" fitWidth="68.0" layoutX="645.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a18" fitHeight="98.0" fitWidth="68.0" layoutX="713.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a19" fitHeight="98.0" fitWidth="68.0" layoutX="781.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a21" fitHeight="98.0" fitWidth="68.0" layoutX="220.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a22" fitHeight="98.0" fitWidth="68.0" layoutX="288.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a23" fitHeight="98.0" fitWidth="75.0" layoutX="356.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a24" fitHeight="98.0" fitWidth="68.0" layoutX="435.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a25" fitHeight="98.0" fitWidth="68.0" layoutX="503.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a26" fitHeight="98.0" fitWidth="68.0" layoutX="577.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a27" fitHeight="98.0" fitWidth="68.0" layoutX="645.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a28" fitHeight="98.0" fitWidth="68.0" layoutX="713.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a29" fitHeight="98.0" fitWidth="68.0" layoutX="789.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a31" fitHeight="105.0" fitWidth="68.0" layoutX="220.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a32" fitHeight="98.0" fitWidth="68.0" layoutX="296.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a33" fitHeight="105.0" fitWidth="75.0" layoutX="360.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a34" fitHeight="98.0" fitWidth="68.0" layoutX="435.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a35" fitHeight="98.0" fitWidth="68.0" layoutX="509.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a36" fitHeight="98.0" fitWidth="68.0" layoutX="577.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a37" fitHeight="98.0" fitWidth="68.0" layoutX="645.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a38" fitHeight="98.0" fitWidth="68.0" layoutX="713.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a39" fitHeight="105.0" fitWidth="75.0" layoutX="789.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a41" fitHeight="98.0" fitWidth="68.0" layoutX="228.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a42" fitHeight="98.0" fitWidth="68.0" layoutX="296.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a43" fitHeight="98.0" fitWidth="68.0" layoutX="364.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a44" fitHeight="98.0" fitWidth="68.0" layoutX="435.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a45" fitHeight="98.0" fitWidth="68.0" layoutX="503.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a46" fitHeight="98.0" fitWidth="68.0" layoutX="577.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a47" fitHeight="98.0" fitWidth="68.0" layoutX="645.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a48" fitHeight="98.0" fitWidth="68.0" layoutX="713.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a49" fitHeight="98.0" fitWidth="75.0" layoutX="793.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a51" fitHeight="105.0" fitWidth="75.0" layoutX="217.0" layoutY="506.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a52" fitHeight="98.0" fitWidth="68.0" layoutX="296.0" layoutY="509.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a53" fitHeight="98.0" fitWidth="68.0" layoutX="360.0" layoutY="509.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a54" fitHeight="98.0" fitWidth="68.0" layoutX="439.0" layoutY="510.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a55" fitHeight="98.0" fitWidth="68.0" layoutX="509.0" layoutY="506.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a56" fitHeight="98.0" fitWidth="68.0" layoutX="577.0" layoutY="506.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a57" fitHeight="98.0" fitWidth="68.0" layoutX="645.0" layoutY="506.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a58" fitHeight="98.0" fitWidth="68.0" layoutX="721.0" layoutY="506.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="a59" fitHeight="98.0" fitWidth="68.0" layoutX="796.0" layoutY="506.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fitHeight="83.0" fitWidth="556.0" layoutX="28.0" pickOnBounds="true">
+            <image>
+                <Image url="@../../../images/tools.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="p2" fitHeight="76.0" fitWidth="75.0" layoutX="196.0" layoutY="1.0" pickOnBounds="true">
+            <image>
+                <Image url="@../../../images/Peashooter.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="p1" fitHeight="76.0" fitWidth="75.0" layoutX="121.0" layoutY="1.0" pickOnBounds="true">
+            <image>
+                <Image url="@../../../images/sunflower.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="p11" disable="true" fitHeight="76.0" fitWidth="75.0" layoutX="121.0" layoutY="1.0" opacity="0.0" pickOnBounds="true">
+            <image>
+                <Image url="@../../../images/sunflower-Selected.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="p21" disable="true" fitHeight="76.0" fitWidth="75.0" layoutX="196.0" layoutY="1.0" opacity="0.0" pickOnBounds="true">
+            <image>
+                <Image url="@../../../images/Peashooter-Selected.jpg" />
+            </image>
+        </ImageView>
+        <Label fx:id="sunCount" alignment="CENTER" layoutX="45.0" layoutY="57.0" prefHeight="26.0" prefWidth="60.0">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Label>
+        <AnchorPane fx:id="gameLayer" pickOnBounds="false" prefHeight="638.0" prefWidth="946.0">
+            <children>
+                <ImageView fitHeight="26.0" fitWidth="124.0" layoutX="825.0" layoutY="612.0" onMouseClicked="#menuBtn">
+                    <image>
+                        <Image url="@../../../images/menu.jpg" />
+                    </image>
+                </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="40.0" layoutX="614.0" layoutY="1.0">
+               <image>
+                  <Image url="@../../../images/Flag.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="40.0" layoutX="714.0" layoutY="1.0">
+               <image>
+                  <Image url="@../../../images/Flag.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="40.0" layoutX="805.0" layoutY="1.0">
+               <image>
+                  <Image url="@../../../images/Flag.png" />
+               </image>
+            </ImageView>
+            </children></AnchorPane>
+    </children>
+</AnchorPane>
