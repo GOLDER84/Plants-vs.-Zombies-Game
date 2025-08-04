@@ -18,6 +18,9 @@ public class Zombie {
     private Stage1Controller stage1Controller;
     private Stage2Controller stage2Controller;
     private Stage3Controller stage3Controller;
+    private Stage4Controller stage4Controller;
+    private Stage5Controller stage5Controller;
+    private Stage6Controller stage6Controller;
     public void setMapController(Stage1Controller stage1Controller) {
         this.stage1Controller = stage1Controller;
     }
@@ -27,7 +30,33 @@ public class Zombie {
     public void setMapController(Stage3Controller stage3Controller) {
         this.stage3Controller = stage3Controller;
     }
+    public void setMapController(Stage4Controller stage4Controller) {
+        this.stage4Controller = stage4Controller;
+    }
+    public void setMapController(Stage5Controller stage5Controller) {
+        this.stage5Controller = stage5Controller;
+    }
+    public void setMapController(Stage6Controller stage6Controller) {
+        this.stage6Controller = stage6Controller;
+    }
 
+    // Add this method to the Zombie class
+    public Object getMapController() {
+        if (stage1Controller != null) {
+            return stage1Controller;
+        } else if (stage2Controller != null) {
+            return stage2Controller;
+        } else if (stage3Controller != null) {
+            return stage3Controller;
+        } else if (stage4Controller != null) {
+            return stage4Controller;
+        } else if (stage5Controller != null) {
+            return stage5Controller;
+        } else if (stage6Controller != null) {
+            return stage6Controller;
+        }
+        return null;
+    }
 
 
     public Zombie(int healthLevel, Power advanceSpeed, Power damagePower , Image animationFrames) {
@@ -100,6 +129,12 @@ public class Zombie {
                         stage2Controller.handleZombieDeath(this);
                     } else if (stage3Controller != null) {
                         stage3Controller.handleZombieDeath(this);
+                    } else if (stage4Controller != null) {
+                        stage4Controller.handleZombieDeath(this);
+                    } else if (stage5Controller != null) {
+                        stage5Controller.handleZombieDeath(this);
+                    } else if (stage6Controller != null) {
+                        stage6Controller.handleZombieDeath(this);
                     }
                 });
             }).start();
@@ -127,6 +162,12 @@ public class Zombie {
                     stage2Controller.handleZombieDeath(this);
                 } else if (stage3Controller != null) {
                     stage3Controller.handleZombieDeath(this);
+                } else if (stage4Controller != null) {
+                    stage4Controller.handleZombieDeath(this);
+                } else if (stage5Controller != null) {
+                    stage5Controller.handleZombieDeath(this);
+                } else if (stage6Controller != null) {
+                    stage6Controller.handleZombieDeath(this);
                 }
             });
         }).start();
