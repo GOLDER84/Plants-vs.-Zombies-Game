@@ -533,7 +533,7 @@ public class Stage5Controller {
         if (rand < 0.5) {
             zombie = new Flag_Zombie();
         } else {
-            zombie = new Normal_Zombie();
+            zombie = new Conehead_Zombie();
         }
 
         zombie.setMapController(this);
