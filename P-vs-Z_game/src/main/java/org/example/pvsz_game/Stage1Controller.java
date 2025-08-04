@@ -741,6 +741,13 @@ public class Stage1Controller {
     }
     @FXML
     void menuBtn(MouseEvent event) throws IOException{
+        HelloApplication.pauseMusic();
+        String path = "src/main/resources/musics/02. Crazy Dave (Intro Theme).mp3";
+        Media media = new Media(new File(path).toURI().toString());
+        HelloApplication.mediaPlayer = new MediaPlayer(media);
+        HelloApplication.mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+        HelloApplication.mediaPlayer.setVolume(0.3);
+        HelloApplication.playMusic();
         HelloApplication.playMusic();
         this.stage = HelloApplication.primaryStage;
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("stepsDay.fxml"));
@@ -756,6 +763,13 @@ public class Stage1Controller {
             playerController.increaseScore(10);
         }
         try {
+            HelloApplication.pauseMusic();
+            String path = "src/main/resources/musics/02. Crazy Dave (Intro Theme).mp3";
+            Media media = new Media(new File(path).toURI().toString());
+            HelloApplication.mediaPlayer = new MediaPlayer(media);
+            HelloApplication.mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+            HelloApplication.mediaPlayer.setVolume(0.3);
+            HelloApplication.playMusic();
             this.stage = HelloApplication.primaryStage;
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("stepsDay.fxml"));
             Parent root = fxmlLoader.load();
