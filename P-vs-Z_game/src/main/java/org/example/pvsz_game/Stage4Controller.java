@@ -325,9 +325,9 @@ public class Stage4Controller {
         Zombie zombie;
         double rand = Math.random();
         if (rand < 0.5) {
-            zombie = new Flag_Zombie();
+            zombie = new Conehead_Zombie();
         } else {
-            zombie = new Normal_Zombie();
+            zombie = new Newspaper_Zombie();
         }
 
         zombie.setMapController(this);
