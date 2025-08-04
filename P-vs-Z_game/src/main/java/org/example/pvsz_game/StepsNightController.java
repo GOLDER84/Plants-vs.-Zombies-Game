@@ -55,7 +55,7 @@ public class StepsNightController {
     }
 
     @FXML
-    void play4Clicked(MouseEvent event) {
+    void play4Clicked(MouseEvent event) throws IOException{
         if (playerController.lastSignedUpPlayer.getCurrentStage() < 4) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Information");
@@ -63,25 +63,17 @@ public class StepsNightController {
             alert.setContentText("Please complete the previous step.");
             alert.showAndWait();
         } else {
-
+            this.stage = HelloApplication.primaryStage;
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("stage4.fxml"));
+            Parent root = fxmlLoader.load();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         }
     }
 
     @FXML
-    void play5Clicked(MouseEvent event) {
-        if (playerController.lastSignedUpPlayer.getCurrentStage() < 5) {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Information");
-            alert.setHeaderText(null);
-            alert.setContentText("Please complete the previous step.");
-            alert.showAndWait();
-        } else {
-
-        }
-    }
-
-    @FXML
-    void play6Clicked(MouseEvent event) {
+    void play5Clicked(MouseEvent event) throws IOException{
         if (playerController.lastSignedUpPlayer.getCurrentStage() < 6) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Information");
@@ -89,7 +81,30 @@ public class StepsNightController {
             alert.setContentText("Please complete the previous step.");
             alert.showAndWait();
         } else {
+            this.stage = HelloApplication.primaryStage;
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("stage6.fxml"));
+            Parent root = fxmlLoader.load();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+    }
 
+    @FXML
+    void play6Clicked(MouseEvent event) throws IOException{
+        if (playerController.lastSignedUpPlayer.getCurrentStage() < 5) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Information");
+            alert.setHeaderText(null);
+            alert.setContentText("Please complete the previous step.");
+            alert.showAndWait();
+        } else {
+            this.stage = HelloApplication.primaryStage;
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("stage5.fxml"));
+            Parent root = fxmlLoader.load();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         }
     }
 
