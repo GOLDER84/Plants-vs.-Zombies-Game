@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="638.0" prefWidth="946.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pvsz_game.InfoController">
+   <children>
+      <ImageView fitHeight="638.0" fitWidth="946.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/Info.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="155.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#viewPlantsBtn" prefHeight="37.0" prefWidth="180.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="579.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#viewZombieBtn" prefHeight="38.0" prefWidth="238.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="806.0" layoutY="605.0" mnemonicParsing="false" onMouseClicked="#closeBtn" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: transparent;" />
+   </children>
+</AnchorPane>
