@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="638.0" prefWidth="946.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pvsz_game.PlantInfoController">
+   <children>
+      <ImageView fitHeight="638.0" fitWidth="946.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/PlantsInfo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="plantInfoGif" fitHeight="502.0" fitWidth="374.0" layoutX="543.0" layoutY="92.0" pickOnBounds="true" />
+      <Button layoutX="32.0" layoutY="98.0" mnemonicParsing="false" onMouseClicked="#peashooterClicked" prefHeight="73.0" prefWidth="55.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="94.0" layoutY="98.0" mnemonicParsing="false" onMouseClicked="#sunflowerClicked" prefHeight="73.0" prefWidth="55.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="156.0" layoutY="98.0" mnemonicParsing="false" onMouseClicked="#cherrybombClicked" prefHeight="73.0" prefWidth="55.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="218.0" layoutY="98.0" mnemonicParsing="false" onMouseClicked="#wallnutClicked" prefHeight="73.0" prefWidth="55.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="279.0" layoutY="98.0" mnemonicParsing="false" onMouseClicked="#snowpeaClicked" prefHeight="74.0" prefWidth="55.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="341.0" layoutY="98.0" mnemonicParsing="false" onMouseClicked="#repeaterClicked" prefHeight="73.0" prefWidth="55.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="403.0" layoutY="98.0" mnemonicParsing="false" onMouseClicked="#puffShroomClicked" prefHeight="73.0" prefWidth="55.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="465.0" layoutY="98.0" mnemonicParsing="false" onMouseClicked="#sunshroomClicked" prefHeight="73.0" prefWidth="55.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="32.0" layoutY="182.0" mnemonicParsing="false" onMouseClicked="#fumeShroomClicked" prefHeight="73.0" prefWidth="55.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="94.0" layoutY="182.0" mnemonicParsing="false" onMouseClicked="#scarelyshroomClicked" prefHeight="73.0" prefWidth="55.0" style="-fx-background-color: transprent;" />
+      <Button layoutX="156.0" layoutY="182.0" mnemonicParsing="false" onMouseClicked="#IceShroomClicked" prefHeight="73.0" prefWidth="55.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="218.0" layoutY="182.0" mnemonicParsing="false" onMouseClicked="#doomshroomClicked" prefHeight="73.0" prefWidth="55.0" style="-fx-background-color: transparent;" />
+      <ImageView fx:id="em1" fitHeight="74.0" fitWidth="55.0" layoutX="156.0" layoutY="98.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/empty.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="em2" fitHeight="74.0" fitWidth="55.0" layoutX="218.0" layoutY="98.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/empty.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="em3" fitHeight="74.0" fitWidth="63.0" layoutX="273.0" layoutY="98.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/empty.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="em4" fitHeight="74.0" fitWidth="55.0" layoutX="341.0" layoutY="98.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/empty.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="em5" fitHeight="74.0" fitWidth="63.0" layoutX="399.0" layoutY="98.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/empty.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="em6" fitHeight="74.0" fitWidth="55.0" layoutX="465.0" layoutY="98.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/empty.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="em7" fitHeight="74.0" fitWidth="55.0" layoutX="32.0" layoutY="182.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/empty.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="em8" fitHeight="74.0" fitWidth="63.0" layoutX="90.0" layoutY="182.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/empty.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="em9" fitHeight="74.0" fitWidth="63.0" layoutX="156.0" layoutY="182.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/empty.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="em10" fitHeight="74.0" fitWidth="55.0" layoutX="218.0" layoutY="182.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/empty.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="804.0" layoutY="604.0" mnemonicParsing="false" onMouseClicked="#closeClicked" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="42.0" layoutY="605.0" mnemonicParsing="false" onMouseClicked="#backToInfoClicked" prefHeight="26.0" prefWidth="186.0" style="-fx-background-color: transparent;" />
+   </children>
+</AnchorPane>
