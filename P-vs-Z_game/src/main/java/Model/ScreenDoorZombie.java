@@ -12,7 +12,7 @@ public class ScreenDoorZombie extends ResistantZombies {
 
     public ScreenDoorZombie() {
         super(20, Power.LOW, Power.MEDIUM, new Image("file:src/main/resources/Gifs/Walk_news.gif"));
-        setEatingAnimation(new Image("file:src/main/resources/Gifs/Attack_news.gif"));
+        setEatingAnimation(new Image("file:src/main/resources/Gifs/Attack_door.gif"));
         normalWalkingAnimation = new Image("file:src/main/resources/Gifs/normal_zombie.gif");
         normalEatingAnimation = new Image("file:src/main/resources/Gifs/ZombieAttack.gif");
     }
