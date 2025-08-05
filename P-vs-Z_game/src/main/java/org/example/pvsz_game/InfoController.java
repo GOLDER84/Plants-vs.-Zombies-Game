@@ -25,7 +25,7 @@ public class InfoController {
     @FXML
     void viewPlantsBtn(MouseEvent event) throws IOException {
         this.stage = HelloApplication.primaryStage;
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("plant.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("plantInfo.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
         stage.setScene(scene);
