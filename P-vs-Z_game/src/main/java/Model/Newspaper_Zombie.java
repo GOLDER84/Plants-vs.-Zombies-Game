@@ -3,7 +3,7 @@ package Model;
 import javafx.application.Platform;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import org.example.pvsz_game.Stage3Controller;  // Import the controller
+import org.example.pvsz_game.Stage3Controller;
 
 public class Newspaper_Zombie extends SpecialZombies {
     private boolean hasLostNewspaper = false;

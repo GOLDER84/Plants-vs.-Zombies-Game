@@ -1,10 +1,6 @@
 package Controller;
 
 import Model.*;
-import Model.Conehead_Zombie;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
@@ -278,6 +274,4 @@ public class PlayerController {
         }
         return "Fail to plant";
     }
-    
-
 }

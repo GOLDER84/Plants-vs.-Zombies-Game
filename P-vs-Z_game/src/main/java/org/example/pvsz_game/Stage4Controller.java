@@ -21,7 +21,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -45,7 +44,6 @@ public class Stage4Controller {
     @FXML private ImageView waveHead;
     @FXML private AnchorPane gameLayer;
     private Stage stage;
-    //315
 
     private String selectedPlant = null;
     private final List<Zombie> zombies = new ArrayList<>();
@@ -227,7 +225,7 @@ public class Stage4Controller {
     private boolean isZombieInPuffShroomRange(Puff_shroom puffShroom) {
         double plantY = puffShroom.getPlantView().getLayoutY();
         double plantX = puffShroom.getPlantView().getLayoutX();
-        double range = 240; // Approx 3 cells (3 * 80px)
+        double range = 240;
 
         for (Zombie zombie : zombies) {
             if (zombie.isDead()) continue;

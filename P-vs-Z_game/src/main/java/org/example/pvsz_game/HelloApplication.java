@@ -16,7 +16,6 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class HelloApplication extends Application {
-    PlayerController playerController = PlayerController.getInstance();
     DataBaseController dataBaseController = DataBaseController.getInstance();
     static Stage primaryStage;
     public static MediaPlayer mediaPlayer;

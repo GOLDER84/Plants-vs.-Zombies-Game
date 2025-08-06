@@ -1,6 +1,6 @@
 package Model;
+
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 public class Normal_Zombie extends BasicZombies{
     public Normal_Zombie() {

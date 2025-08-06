@@ -1,4 +1,3 @@
-// src/main/java/Model/Plant.java
 package Model;
 
 import javafx.scene.image.ImageView;

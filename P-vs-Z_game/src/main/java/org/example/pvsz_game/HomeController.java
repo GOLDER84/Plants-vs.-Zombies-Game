@@ -10,14 +10,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.scene.control.Label;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
 public class HomeController implements Initializable {
@@ -57,14 +53,6 @@ public class HomeController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        //
-//                String path = "src/main/resources/musics/02. Crazy Dave (Intro Theme).mp3";
-//                Media media = new Media(new File(path).toURI().toString());
-//                MediaPlayer mediaPlayer = new MediaPlayer(media);
-//                mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
-//                mediaPlayer.setVolume(0.5);
-//                mediaPlayer.play();
-         //
         String fxmlPath;
         if (playerController.lastSignedUpPlayer.getCurrentStage() < 4) {
             fxmlPath = "stepsDay.fxml";

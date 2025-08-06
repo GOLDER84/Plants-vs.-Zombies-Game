@@ -21,7 +21,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -45,7 +44,6 @@ public class Stage5Controller {
     @FXML private ImageView waveHead;
     @FXML private AnchorPane gameLayer;
     private Stage stage;
-    //254, 299
 
     private String selectedPlant = null;
     private final List<Zombie> zombies = new ArrayList<>();
@@ -252,22 +250,6 @@ public class Stage5Controller {
         }).start();
     }
 
-//    private boolean isZombieInPuffShroomRange(Puff_shroom puffShroom) {
-//        double plantY = puffShroom.getPlantView().getLayoutY();
-//        double plantX = puffShroom.getPlantView().getLayoutX();
-//        double range = 240; // Approx 3 cells
-//
-//        for (Zombie zombie : zombies) {
-//            if (zombie.isDead()) continue;
-//            ImageView zombieView = zombie.getZombieView();
-//            double zombieY = zombieView.getLayoutY();
-//            double zombieX = zombieView.getLayoutX() + zombieView.getTranslateX();
-//            if (Math.abs(zombieY - plantY) <= 50 && zombieX > plantX && zombieX < plantX + range) {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
     private boolean isZombieInPuffShroomRange(Puff_shroom puffShroom) {
         double plantY = puffShroom.getPlantView().getLayoutY();
         double plantX = puffShroom.getPlantView().getLayoutX();
@@ -294,18 +276,8 @@ public class Stage5Controller {
     private boolean isZombieInFumeShroomRange(Fume_shroom fumeShroom) {
         double plantY = fumeShroom.getPlantView().getLayoutY();
         double plantX = fumeShroom.getPlantView().getLayoutX();
-        double range = 320; // Approx 4 cells
+        double range = 320;
 
-//        for (Zombie zombie : zombies) {
-//            if (zombie.isDead()) continue;
-//            ImageView zombieView = zombie.getZombieView();
-//            double zombieY = zombieView.getLayoutY();
-//            double zombieX = zombieView.getLayoutX() + zombieView.getTranslateX();
-//            if (Math.abs(zombieY - plantY) <= 50 && zombieX > plantX && zombieX < plantX + range) {
-//                return true;
-//            }
-//        }
-//        return false;
         for (Zombie zombie : zombies) {
             if (zombie.isDead()) continue;
 
@@ -327,7 +299,7 @@ public class Stage5Controller {
     private void handleScaredyShroomState(Scaredy_shroom scaredyShroom) {
         double plantY = scaredyShroom.getPlantView().getLayoutY();
         double plantX = scaredyShroom.getPlantView().getLayoutX();
-        double oneCellRange = 80; // Approx 1 cell
+        double oneCellRange = 80;
 
         boolean isScared = false;
         for (Zombie zombie : zombies) {
@@ -354,18 +326,6 @@ public class Stage5Controller {
         });
     }
 
-//    private boolean isZombieInRow(WarriorPlants plant) {
-//        double y = plant.getPlantView().getLayoutY();
-//        for (Zombie z : zombies) {
-//            if (z.isDead()) continue;
-//            double zy = z.getZombieView().getLayoutY();
-//            double zx = z.getZombieView().getLayoutX() + z.getZombieView().getTranslateX();
-//            if (Math.abs(zy - y) <= 20 && zx > plant.getPlantView().getLayoutX()) {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
     private boolean isZombieInRow(WarriorPlants plant){
         double plantY = plant.getPlantView().getLayoutY();
         double plantX = plant.getPlantView().getLayoutX();
@@ -391,35 +351,6 @@ public class Stage5Controller {
     }
 
     private void fireSmokyBullet(WarriorPlants plant) {
-//        if (gameIsOver) return;
-//        ImageView bullet = new ImageView(new Image("file:src/main/resources/images/smoky_stone.png"));
-//        bullet.setLayoutX(plant.getPlantView().getLayoutX() + 20);
-//        bullet.setLayoutY(plant.getPlantView().getLayoutY() + 10);
-//        bullet.setFitWidth(25);
-//        bullet.setFitHeight(25);
-//        gameLayer.getChildren().add(bullet);
-//
-//        final boolean[] hasHit = {false};
-//        TranslateTransition transition = new TranslateTransition(Duration.seconds(3), bullet);
-//        transition.setFromX(0);
-//        transition.setToX(1000 - bullet.getLayoutX());
-//
-//        transition.currentTimeProperty().addListener((obs, oldTime, newTime) -> {
-//            if (hasHit[0] || gameIsOver) return;
-//            for (Zombie z : new ArrayList<>(zombies)) {
-//                ImageView zView = z.getZombieView();
-//                if (bullet.getBoundsInParent().intersects(zView.getBoundsInParent())) {
-//                    hasHit[0] = true;
-//                    gameLayer.getChildren().remove(bullet);
-//                    z.takeDamage(1);
-//                    transition.stop();
-//                    break;
-//                }
-//            }
-//        });
-//
-//        transition.setOnFinished(e -> gameLayer.getChildren().remove(bullet));
-//        transition.play();
         if (gameIsOver) return;
         ImageView bullet = new ImageView(new Image("file:src/main/resources/images/smoky_stone.png"));
         bullet.setLayoutX(plant.getPlantView().getLayoutX() + 20);
@@ -468,7 +399,7 @@ public class Stage5Controller {
         bullet.setFitHeight(25);
         gameLayer.getChildren().add(bullet);
 
-        double range = 320; // 4 cells
+        double range = 320;
         double startX = bullet.getLayoutX();
         double endX = startX + range;
 

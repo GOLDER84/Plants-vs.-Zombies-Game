@@ -23,7 +23,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -40,7 +39,7 @@ public class Stage2Controller {
     @FXML private ImageView a31, a32, a33, a34, a35, a36, a37, a38, a39;
     @FXML private ImageView a41, a42, a43, a44, a45, a46, a47, a48, a49;
     @FXML private ImageView a51, a52, a53, a54, a55, a56, a57, a58, a59;
-    @FXML private ImageView p1 , p11 , p2 , p21 , p3 , p31 , p4 , p41 , p5 , p51 , p6 , p61;
+    @FXML private ImageView p1 , p11 , p2 , p21 , p3 , p31 , p4 , p41;
     @FXML private Label sunCount;
     @FXML private ProgressBar zombieWaveBar;
     @FXML private ImageView waveHead;
@@ -54,7 +53,6 @@ public class Stage2Controller {
     private final ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
 
     private final int totalWaves = 3;
-    private int totalZombiesInWave;
     private int zombiesKilledInWave;
     private PlayerController playerController = PlayerController.getInstance();
     private boolean gameIsOver = false;
@@ -88,7 +86,6 @@ public class Stage2Controller {
             double newX = (barStartX + barWidth) - (newValue.doubleValue() * barWidth) - (headWidth / 2);
             waveHead.setLayoutX(newX);
         });
-        // Set initial position
         waveHead.setLayoutX((barStartX + barWidth) - (zombieWaveBar.getProgress() * barWidth) - (headWidth / 2));
     }
 
@@ -221,7 +218,7 @@ public class Stage2Controller {
                 }
             } else if (plant instanceof Cherry_bomb cherryBomb) {
                 try {
-                    Thread.sleep(1000); // Wait for explosion
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
                     return;
@@ -233,7 +230,6 @@ public class Stage2Controller {
                     occupiedCells.values().remove(cherryBomb);
                 });
             }
-            // Wall_nut does not need a thread as it's a passive plant.
         }).start();
     }
 
@@ -241,11 +237,9 @@ public class Stage2Controller {
         ImageView bombView = cherryBomb.getPlantView();
         Bounds bombBounds = bombView.getBoundsInParent();
 
-        // define explosion radius (covers one cell in every direction)
         double radiusX = 55;
         double radiusY = 55;
 
-        // expanded bounds for explosion area
         Rectangle2D explosionArea = new Rectangle2D(
                 bombBounds.getMinX() - radiusX,
                 bombBounds.getMinY() - radiusY,
@@ -253,7 +247,6 @@ public class Stage2Controller {
                 bombBounds.getHeight() + radiusY * 2
         );
 
-        // trigger explosion on any zombie whose bounds intersect that area
         zombies.stream()
                 .filter(z -> !z.isDead())
                 .filter(z -> {
@@ -266,7 +259,7 @@ public class Stage2Controller {
                 .forEach(Zombie::explodeDeath);
 
         cherryBomb.setAlive(false);
-        // remove bomb view after a delay
+
         new Thread(() -> {
             try { Thread.sleep(1000); } catch (InterruptedException ignored) {}
             Platform.runLater(() -> {
@@ -276,68 +269,6 @@ public class Stage2Controller {
             });
         }).start();
     }
-
-//    private void explode(Cherry_bomb cherryBomb) {
-//        ImageView bombView = cherryBomb.getPlantView();
-//        double bombX = bombView.getLayoutX();
-//        double bombY = bombView.getLayoutY();
-//
-//        // Change to explosion GIF
-//        bombView.setImage(new Image("file:src/main/resources/Gifs/Cherry_bomb.gif"));
-//
-//        // Increased explosion radius - making it asymmetric to catch zombies that have passed
-//        double cellWidth = 75;
-//        double cellHeight = 100;
-//        double forwardRadius = cellWidth * 1.5;  // ~112.5px forward
-//        double backwardRadius = cellWidth * 3;   // ~225px backward to catch zombies that have passed
-//        double verticalRadius = cellHeight * 1.2; // ~120px up and down
-//
-//        List<Zombie> zombiesToExplode = zombies.stream()
-//                .filter(z -> !z.isDead())
-//                .filter(z -> {
-//                    ImageView zView = z.getZombieView();
-//                    double zX = zView.getLayoutX() + zView.getTranslateX();
-//                    double zY = zView.getLayoutY();
-//
-//                    // Enhanced horizontal range check - asymmetric to catch zombies behind
-//                    boolean withinHorizontalRange;
-//                    if (zX <= bombX) {
-//                        // For zombies that already passed the bomb (to the left)
-//                        withinHorizontalRange = (bombX - zX) <= backwardRadius;
-//                    } else {
-//                        // For zombies approaching the bomb (to the right)
-//                        withinHorizontalRange = (zX - bombX) <= forwardRadius;
-//                    }
-//
-//                    boolean withinVerticalRange = Math.abs(zY - bombY) <= verticalRadius;
-//
-//                    return withinHorizontalRange && withinVerticalRange;
-//                })
-//                .collect(Collectors.toList());
-//
-//        for (Zombie zombie : zombiesToExplode) {
-//            zombie.explodeDeath();
-//        }
-//
-//        // Mark plant as not alive and remove after animation
-//        cherryBomb.setAlive(false);
-//
-//        new Thread(() -> {
-//            try {
-//                Thread.sleep(1000);
-//            } catch (InterruptedException e) {
-//                Thread.currentThread().interrupt();
-//            }
-//            Platform.runLater(() -> {
-//                // Remove from game layer
-//                gameLayer.getChildren().remove(bombView);
-//                // Remove from active plants
-//                activePlants.remove(cherryBomb);
-//                // Remove from occupied cells
-//                occupiedCells.entrySet().removeIf(entry -> entry.getValue() == cherryBomb);
-//            });
-//        }).start();
-//    }
 
     private boolean isZombieInRow(Peashooter peashooter) {
         double plantY = peashooter.getPlantView().getLayoutY();
@@ -561,7 +492,6 @@ public class Stage2Controller {
 
             double zombieX = zombieView.getLayoutX() + zombieView.getTranslateX();
             double zombieY = zombieView.getLayoutY();
-//30 بود
             Plant closestPlant = activePlants.stream()
                     .filter(p -> p.getPlantView() != null && p.getPlantView().getParent() != null)
                     .filter(p -> Math.abs(p.getPlantView().getLayoutY() - zombieY) < 50)

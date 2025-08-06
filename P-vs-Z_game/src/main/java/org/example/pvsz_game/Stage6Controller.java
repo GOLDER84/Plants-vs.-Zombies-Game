@@ -21,7 +21,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -45,7 +44,6 @@ public class Stage6Controller {
     @FXML private ImageView waveHead;
     @FXML private AnchorPane gameLayer;
     private Stage stage;
-    //254, 299 . 699
 
     private String selectedPlant = null;
     private final List<Zombie> zombies = new ArrayList<>();
@@ -256,7 +254,7 @@ public class Stage6Controller {
                 }
             } else if (plant instanceof Ice_shroom iceShroom) {
                 try {
-                    Thread.sleep(2000); // Show the animation for 2 seconds
+                    Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
                     return;
@@ -269,7 +267,7 @@ public class Stage6Controller {
                 });
             }  else if (plant instanceof Doom_shroom doomShroom) {
                 try {
-                    Thread.sleep(2500); // Show the animation for 3 seconds
+                    Thread.sleep(2500);
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
                     return;
@@ -287,7 +285,6 @@ public class Stage6Controller {
     private void freezeAllZombies() {
         Map<Zombie, TranslateTransition> zombieTransitions = new HashMap<>();
 
-        // Store and pause all zombie transitions
         for (Zombie zombie : zombies) {
             if (zombie.isDead()) continue;
 
@@ -298,12 +295,10 @@ public class Stage6Controller {
                 zombieTransitions.put(zombie, transition);
                 transition.pause();
 
-                // Change to a frozen appearance
                 zombieView.setEffect(new javafx.scene.effect.ColorAdjust(0, -0.9, -0.5, 0));
             }
         }
 
-        // Resume after 5 seconds
         new Thread(() -> {
             try {
                 Thread.sleep(5000);
@@ -336,7 +331,6 @@ public class Stage6Controller {
             zombieView.setImage(new Image("file:src/main/resources/Gifs/BoomDie.gif"));
             zombie.explodeDeath();
 
-            // Remove zombie after animation
             new Thread(() -> {
                 try {
                     Thread.sleep(3000);
@@ -351,26 +345,10 @@ public class Stage6Controller {
         }
     }
 
-    //    private boolean isZombieInPuffShroomRange(Puff_shroom puffShroom) {
-//        double plantY = puffShroom.getPlantView().getLayoutY();
-//        double plantX = puffShroom.getPlantView().getLayoutX();
-//        double range = 240; // Approx 3 cells
-//
-//        for (Zombie zombie : zombies) {
-//            if (zombie.isDead()) continue;
-//            ImageView zombieView = zombie.getZombieView();
-//            double zombieY = zombieView.getLayoutY();
-//            double zombieX = zombieView.getLayoutX() + zombieView.getTranslateX();
-//            if (Math.abs(zombieY - plantY) <= 50 && zombieX > plantX && zombieX < plantX + range) {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
     private boolean isZombieInPuffShroomRange(Puff_shroom puffShroom) {
         double plantY = puffShroom.getPlantView().getLayoutY();
         double plantX = puffShroom.getPlantView().getLayoutX();
-        double range = 240; // Approx 3 cells (3 * 80px)
+        double range = 240;
 
         for (Zombie zombie : zombies) {
             if (zombie.isDead()) continue;
@@ -393,18 +371,8 @@ public class Stage6Controller {
     private boolean isZombieInFumeShroomRange(Fume_shroom fumeShroom) {
         double plantY = fumeShroom.getPlantView().getLayoutY();
         double plantX = fumeShroom.getPlantView().getLayoutX();
-        double range = 320; // Approx 4 cells
+        double range = 320;
 
-//        for (Zombie zombie : zombies) {
-//            if (zombie.isDead()) continue;
-//            ImageView zombieView = zombie.getZombieView();
-//            double zombieY = zombieView.getLayoutY();
-//            double zombieX = zombieView.getLayoutX() + zombieView.getTranslateX();
-//            if (Math.abs(zombieY - plantY) <= 50 && zombieX > plantX && zombieX < plantX + range) {
-//                return true;
-//            }
-//        }
-//        return false;
         for (Zombie zombie : zombies) {
             if (zombie.isDead()) continue;
 
@@ -426,7 +394,7 @@ public class Stage6Controller {
     private void handleScaredyShroomState(Scaredy_shroom scaredyShroom) {
         double plantY = scaredyShroom.getPlantView().getLayoutY();
         double plantX = scaredyShroom.getPlantView().getLayoutX();
-        double oneCellRange = 80; // Approx 1 cell
+        double oneCellRange = 80;
 
         boolean isScared = false;
         for (Zombie zombie : zombies) {
@@ -453,18 +421,6 @@ public class Stage6Controller {
         });
     }
 
-    //    private boolean isZombieInRow(WarriorPlants plant) {
-//        double y = plant.getPlantView().getLayoutY();
-//        for (Zombie z : zombies) {
-//            if (z.isDead()) continue;
-//            double zy = z.getZombieView().getLayoutY();
-//            double zx = z.getZombieView().getLayoutX() + z.getZombieView().getTranslateX();
-//            if (Math.abs(zy - y) <= 20 && zx > plant.getPlantView().getLayoutX()) {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
     private boolean isZombieInRow(WarriorPlants plant){
         double plantY = plant.getPlantView().getLayoutY();
         double plantX = plant.getPlantView().getLayoutX();
@@ -490,35 +446,6 @@ public class Stage6Controller {
     }
 
     private void fireSmokyBullet(WarriorPlants plant) {
-//        if (gameIsOver) return;
-//        ImageView bullet = new ImageView(new Image("file:src/main/resources/images/smoky_stone.png"));
-//        bullet.setLayoutX(plant.getPlantView().getLayoutX() + 20);
-//        bullet.setLayoutY(plant.getPlantView().getLayoutY() + 10);
-//        bullet.setFitWidth(25);
-//        bullet.setFitHeight(25);
-//        gameLayer.getChildren().add(bullet);
-//
-//        final boolean[] hasHit = {false};
-//        TranslateTransition transition = new TranslateTransition(Duration.seconds(3), bullet);
-//        transition.setFromX(0);
-//        transition.setToX(1000 - bullet.getLayoutX());
-//
-//        transition.currentTimeProperty().addListener((obs, oldTime, newTime) -> {
-//            if (hasHit[0] || gameIsOver) return;
-//            for (Zombie z : new ArrayList<>(zombies)) {
-//                ImageView zView = z.getZombieView();
-//                if (bullet.getBoundsInParent().intersects(zView.getBoundsInParent())) {
-//                    hasHit[0] = true;
-//                    gameLayer.getChildren().remove(bullet);
-//                    z.takeDamage(1);
-//                    transition.stop();
-//                    break;
-//                }
-//            }
-//        });
-//
-//        transition.setOnFinished(e -> gameLayer.getChildren().remove(bullet));
-//        transition.play();
         if (gameIsOver) return;
         ImageView bullet = new ImageView(new Image("file:src/main/resources/images/smoky_stone.png"));
         bullet.setLayoutX(plant.getPlantView().getLayoutX() + 20);
@@ -567,7 +494,7 @@ public class Stage6Controller {
         bullet.setFitHeight(25);
         gameLayer.getChildren().add(bullet);
 
-        double range = 320; // 4 cells
+        double range = 320;
         double startX = bullet.getLayoutX();
         double endX = startX + range;
 
@@ -705,10 +632,7 @@ public class Stage6Controller {
         transition.setToX(endX - startX);
         transition.setInterpolator(javafx.animation.Interpolator.LINEAR);
 
-        // Store transition for freezing functionality
         zombieView.getProperties().put("activeTransition", transition);
-
-        // Rest of the startZombieThread code remains the same...
 
         transition.currentTimeProperty().addListener((obs, oldTime, newTime) -> {
             if (zombie.isDead() || gameIsOver) {
@@ -761,70 +685,6 @@ public class Stage6Controller {
 
         transition.play();
     }
-//    private void startZombieThread(Zombie zombie) {
-//        ImageView zombieView = zombie.getZombieView();
-//        double startX = zombieView.getLayoutX();
-//        double endX = 150;
-//        double distance = startX - endX;
-//        double speed = 12;
-//        double durationSeconds = distance / speed;
-//
-//        TranslateTransition transition = new TranslateTransition(Duration.seconds(durationSeconds), zombieView);
-//        transition.setFromX(0);
-//        transition.setToX(endX - startX);
-//        transition.setInterpolator(javafx.animation.Interpolator.LINEAR);
-//
-//        transition.currentTimeProperty().addListener((obs, oldTime, newTime) -> {
-//            if (zombie.isDead() || gameIsOver) {
-//                transition.stop();
-//                return;
-//            }
-//
-//            double zombieX = zombieView.getLayoutX() + zombieView.getTranslateX();
-//            double zombieY = zombieView.getLayoutY();
-//
-//            Plant closestPlant = activePlants.stream()
-//                    .filter(p -> p.getPlantView() != null && p.getPlantView().getParent() != null)
-//                    .filter(p -> Math.abs(p.getPlantView().getLayoutY() - zombieY) < 30)
-//                    .filter(p -> zombieX < p.getPlantView().getLayoutX() + p.getPlantView().getFitWidth())
-//                    .min((p1, p2) -> Double.compare(p1.getPlantView().getLayoutX(), p2.getPlantView().getLayoutX()))
-//                    .orElse(null);
-//
-//            boolean isColliding = false;
-//            if (closestPlant != null) {
-//                double plantX = closestPlant.getPlantView().getLayoutX();
-//                if (zombieX <= plantX + 5) {
-//                    isColliding = true;
-//                    if (!zombie.isEating()) {
-//                        zombie.setEating(true);
-//                        if (zombie.getEatingAnimation() != null) {
-//                            zombieView.setImage(zombie.getEatingAnimation());
-//                        }
-//                        startEatingPlant(zombie, closestPlant, transition);
-//                    }
-//                    transition.pause();
-//                }
-//            }
-//
-//            if (!isColliding && zombie.isEating()) {
-//                zombie.setEating(false);
-//                zombieView.setImage(zombie.getAnimationFrames());
-//                transition.play();
-//            }
-//        });
-//
-//        transition.setOnFinished(e -> {
-//            if (!zombie.isDead() && !gameIsOver) {
-//                gameLayer.getChildren().remove(zombieView);
-//                zombies.remove(zombie);
-//                endGame();
-//            } else if (zombie.isDead()) {
-//                Platform.runLater(this::checkWinCondition);
-//            }
-//        });
-//
-//        transition.play();
-//    }
 
     private void startEatingPlant(Zombie zombie, Plant plant, TranslateTransition transition) {
         new Thread(() -> {

@@ -1,9 +1,7 @@
 package Model;
 
 import Controller.DataBaseController;
-
 import java.util.ArrayList;
-import java.util.List;
 
 public class Player {
     DataBaseController dataBaseController = DataBaseController.getInstance();
@@ -71,6 +69,7 @@ public class Player {
     public int getScore() {
         return score;
     }
+
     public void setScore(int score) {
         this.score = score;
     }

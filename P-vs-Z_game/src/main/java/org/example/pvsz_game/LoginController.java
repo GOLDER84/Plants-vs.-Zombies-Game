@@ -1,6 +1,5 @@
 package org.example.pvsz_game;
 
-import Controller.DataBaseController;
 import Controller.PlayerController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +15,6 @@ import java.io.IOException;
 
 public class LoginController {
     private PlayerController playerController = PlayerController.getInstance();
-//    private DataBaseController dataBaseController = DataBaseController.getInstance();
     private Stage stage;
 
     @FXML

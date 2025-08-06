@@ -1,7 +1,6 @@
 package Model;
 
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 public class ResistantZombies extends Zombie{
 

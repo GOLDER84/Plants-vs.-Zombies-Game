@@ -13,7 +13,6 @@ public class ExplosivePlants extends Plant{
         this.destructionRange = destructionRange;
     }
 
-
     public Power getDestructionPower() {
         return destructionPower;
     }

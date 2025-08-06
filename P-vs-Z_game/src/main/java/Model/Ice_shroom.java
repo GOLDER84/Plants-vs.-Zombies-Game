@@ -7,9 +7,4 @@ public class Ice_shroom extends ExplosivePlants{
     public Ice_shroom() {
         super("ice_shroom", 75, 10, new ImageView(new Image("file:src/main/resources/Gifs/ice_shroom.gif")), Power.LOW, 45);
     }
-
-
-//    public Ice_shroom() {
-//        super("ice_shroom", 75, new ImageView(new Image("file:src/main/resources/Gifs/ice_shroom.gif")), Power.LOW, 45);
-//    }
 }
