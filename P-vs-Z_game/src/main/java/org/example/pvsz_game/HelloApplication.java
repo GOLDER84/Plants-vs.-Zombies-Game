@@ -11,10 +11,8 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
-
 import java.io.File;
 import java.io.IOException;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class HelloApplication extends Application {
@@ -33,11 +31,9 @@ public class HelloApplication extends Application {
         StackPane root = new StackPane(mediaView);
         Scene introScene = new Scene(root , 946 , 638);
 
-        //
         mediaView.fitWidthProperty().bind(introScene.widthProperty());
         mediaView.fitHeightProperty().bind(introScene.heightProperty());
         mediaView.setPreserveRatio(false);
-        //
 
         stage.setScene(introScene);
         stage.setTitle("Intro Video");
