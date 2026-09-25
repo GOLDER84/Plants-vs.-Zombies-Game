@@ -1,56 +1,104 @@
+# 🧟 Plants vs Zombies – Java Game Project
 
-<div dir='rtl' align="center">
+## 📌 Project Description
+
+This project is a Java-based implementation of the popular game **Plants vs Zombies**, developed using Object-Oriented Programming principles.
+
+It was created as a final academic project to simulate game mechanics, character interactions, and grid-based combat logic while applying software design concepts in a real-world scenario.
+
+The game models the battle between plants and zombies in a strategic defense environment.
+
+---
+
+## 🎮 Gameplay Overview
+
+Players place different types of plants on a grid map to defend against waves of zombies trying to reach the base.
+
+Each plant has unique abilities, attack power, and cost, while zombies have health, speed, and damage characteristics.
+
+---
+
+## ✨ Features
+
+- Grid-based game map  
+- Multiple plant types  
+- Multiple zombie types  
+- Attack & defense mechanics  
+- Health and damage system  
+
+---
+
+## 🛠 Technologies Used
+
+- Java  
+- Object-Oriented Programming (OOP)  
+- Java Collections Framework  
+- Game logic simulation  
+
+---
+
+## 🧠 OOP Concepts Implemented
+
+- Encapsulation  
+- Inheritance (Plant / Zombie hierarchy)  
+- Polymorphism (Different attack behaviors)  
+- Abstraction (Game entities design)  
+
+---
+
+## 🏗 Game Architecture
+
+The project is structured into logical components:
+
+- **Entities** → Plants, Zombies  
+- **Game Engine** → Game loop & logic  
+- **Map System** → Grid management  
+- **Combat System** → Damage calculations  
+
+---
+
+## ▶️ How to Run
+
+1️⃣ Clone the repository
+git clone https://github.com/GOLDER84/final-project-GOLDER84.git
+
+2️⃣ Open in IntelliJ IDEA / Eclipse
+
+3️⃣ Compile the project
+
+4️⃣ Run `Main.java`
+
+---
+
+## 🎯 Learning Objectives
+
+- Implement large-scale OOP systems  
+- Design game entity hierarchies  
+- Simulate combat logic  
+- Manage game state & interactions  
+
+---
+
+## 🚀 Future Improvements
+
+- Graphical User Interface (GUI)  
+- Sound effects  
+- Level system  
+- Save & load game state  
+
+---
 
 
- ## به نام پروردگار هدایت کننده به راه راست
+## 👤 Author
 
-  دانشگاه اصفهان
+**Aref Zargar**  
+Computer Engineering Student
 
-  برنامه نویسی پیشرفته – دکتر رمضانی 
-
-  بهار ۰۳-۰۴
-
- ## پروژه گیم - Plants vs. Zombies
-
-
-
-
-  <img src="https://img.utdstc.com/screen/711/946/7119464d0906b86e5d4f9cd51784f3f4628425a83f72ad9e33962b35ca531be4:600"  width="500"/>
-
- ### طراحان پروژه : امیرعلی گلی – زهرا مرتضوی - نگار فریدونی - دریا ظهری - پریناز محرابی - مسیح روغنی 
-</div>
--
-<div dir='rtl' align="justify">
-
-
-## معرفی پروژه
-در این پروژه قصد داریم بازی‌ای مشابه Plants vs. Zombies طراحی و پیاده‌سازی کنیم.  این بازی در سبک استراتژیک و دفاع از قلعه (Tower Defense) قرار می‌گیرد. در این نوع بازی‌ها، بازیکن با استفاده از منابع محدود، باید واحدهای دفاعی خود را بچیند تا از نفوذ دشمن به منطقه محافظت‌شده جلوگیری کند.
-در نسخه‌ای که ما طراحی می‌کنیم، بازیکن با استفاده از گیاهان مختلف که هر کدام ویژگی‌ها و قدرت‌های مخصوص به خود را دارند، تلاش می‌کند جلوی هجوم زامبی‌ها را بگیرد. زامبی‌ها از سمت راست صفحه وارد می‌شوند و بازیکن باید با مدیریت آفتاب‌ها و انتخاب به‌موقع گیاهان مناسب، از رسیدن آن‌ها به خانه جلوگیری کند.
-هدف نهایی بازی، دفاع موفق از خانه در برابر موج‌های پی‌در‌پی زامبی‌ها با کمترین خسارت ممکن است. بازی دارای دو حالت اصلی شب و روز است که در هر حالت مراحل مختلفی وجود دارد که بازیکن را به چالش می‌کشند.
+- GitHub: https://github.com/GOLDER84  
+- LinkedIn: https://www.linkedin.com/in/aref-zargar-a95287367/  
+- Email: aref.unlimited.84@gmail.com
 
 
 
 
-## تاریخ تحویل و نکات قابل توجه
-تاریخ تحویل این پروژه، ۱۹ تیر ۱۴۰۴ می باشد.
-پروژه خود را با در نظر گرفتن موارد زیر پیاده‌سازی کنید. رعایت نکردن آنها باعث از دست رفتن بخش زیادی از نمره شما می‌شود:
 
-1.  اصول شی گرایی و کلین کد را رعایت کنید.
-2. از معماری MVC بهره بگیرید. تشخیص و پکیج بندی درست به عهده خودتان است.
-3. برای پیاده سازی GUI این پروژه تنها مجاز به استفاده از JavaFX هستید.
-4. پروژه شما باید به صورت چند نخی پیاده شده باشد. 
-5. بستر پیاده سازی پروژه گیت هاب میباشد. (کامیت‌های درست در بازه‌های کوتاه)
-6. موارد امتیازی برای یادگیری بیشتر دانشجویان علاقمند و همچنین نمره ای اضافه بر نمرۀ کل
-قرار داده شده اند. طبیعتاً پیاده سازی این موارد اجباری نیست امّا در صورت پیاده سازی، تسلط کافی برای ارائه داشته باشید.
-7. هرگونه شباهت غیرمعمول بین پروژه های ارسالی ، منجر به صفر شدن نمره تقلب‌کنندگان خواهد شد.
-
-نحوه پیاده سازی مواردی که صریحا در مستند پروژه ذکر نشده است ، به عهده و خلاقیت خودتان خواهد بود . هرگونه راه حل قابل اجرا در صورت کارکرد درست و عدم تناقض با موارد خواسته شده در داک، نمره کامل را خواهد گرفت .
-
-
-
-
-**نکته: لطفاً قبل از شروع کد زدن، مستند پروژه را تا انتها مطالعه فرمایید!** 
-
-
-
-</div>
